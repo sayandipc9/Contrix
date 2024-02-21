@@ -68,26 +68,7 @@
 <script>
   var data='';
   const filePath = 'data.json';
-  document.addEventListener('DOMContentLoaded', function() {
-      const dataToWrite = {
-        name: 'John Doe',
-        age: 30,
-        city: 'New York'
-      };
-
-fetch(filePath, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(dataToWrite)
-      })
-      .then(response => {
-        console.log('Data has been written to', filePath);
-      })
-      .catch(error => {
-        console.error('Error writing to file:', error);
-      });
+ 
   fetch(filePath)
       .then(response => response.json())
       .then(data => {
