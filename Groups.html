@@ -73,7 +73,7 @@
       .then(data => {
         console.log('Data read from file:', data);
 	data = JSON.parse(data);
-        alert(data);
+        alert(data[0]);
       })
       .catch(error => {
         console.error('Error reading file:', error);
